@@ -20,7 +20,7 @@ body{
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: rgb(74, 34, 42);
+    background: transparent;
     display: flex;
     justify-content:space-evenly;
     align-items: center;
@@ -53,6 +53,7 @@ body{
     align-items: center;
     height: 90vh;
     padding: 0 10%;
+    
 }
 
 .home-content{
@@ -73,6 +74,7 @@ body{
 
 .home-content p{
     font-size: 16px;
+    margin: 20px 0 40px;
 }
 
 .home-content .btn-box{
@@ -90,15 +92,94 @@ body{
     width: 150px;
     height: 45px;
     background:  rgb(74, 34, 42);;
-    border: 3px solid  rgb(74, 34, 42);;
+    border: 3px solid  rgb(74, 34, 42);
     border-radius: 8px;
     font-size: 19px;
     color: azure;
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .2s;
 }
 
-.btn-box ::before{
+.btn-box a:hover{
+    background: rgb(7, 8, 18);
+}
+
+.btn-box a:nth-child(2){
+   background-color:transparent ; 
+   color: rgb(166, 75, 93);
+}
+
+.btn-box a:nth-child(2):hover{
+    background: rgb(7, 8, 18);
+}
+
+.btn-box a:nth-child(2)::before{
+    background: rgb(74, 34, 42);
+}
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(7, 8, 18);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before{
+    width: 100%;
+}
+
+.home-section{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-section a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(49, 113, 113);
+    border-radius: 50%;
+    font-size: 38px;
+    color: white;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5;
+}
+
+
+.home-section a::before{
+    content: '';
     position: absolute;
     top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(74, 34, 42);
+    z-index: -1;
+    transition: .3s;
+}
+
+.home-section a:hover{
+    color: rgb(7, 8, 18);
+}
+
+.home-section a:hover:before{
+    width: 100%;
+}
