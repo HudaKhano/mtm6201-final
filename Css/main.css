@@ -1,0 +1,104 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+</style>
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif; 
+}
+
+body{
+    background: rgb(7, 8, 18);
+    color: aliceblue;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgb(74, 34, 42);
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.logo{
+    font-size: 30px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 20px;
+    transition: .4s;
+}
+
+.navbar a:hover,
+.navbar a:active
+{
+    color: rgb(49, 113, 113);
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    padding: 0 10%;
+}
+
+.home-content{
+    max-width: 500px;
+}
+
+.home-content h1{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.home-content h3{
+    font-size: 28px;
+    font-weight: 600;
+    color:  rgb(75, 170, 170);
+}
+
+.home-content p{
+    font-size: 16px;
+}
+
+.home-content .btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 44px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 45px;
+    background:  rgb(74, 34, 42);;
+    border: 3px solid  rgb(74, 34, 42);;
+    border-radius: 8px;
+    font-size: 19px;
+    color: azure;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.btn-box ::before{
+    position: absolute;
+    top: 0;
